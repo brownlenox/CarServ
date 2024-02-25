@@ -3,14 +3,16 @@
     {%load static%}
 
     {%block content%}
+ 
 
     <!-- Carousel Start -->
     {% include 'alerts.html'%}
+ 
     <div class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{% static 'assets/img/turboo2.jpg'}" alt="Image">
+                    <img class="w-100" src="{% static 'assets/img/turboo2.jpg'%}" alt="Image">
                     <div class="carousel-caption d-flex align-items-center">
                         <div class="container">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
@@ -20,14 +22,14 @@
                                     <a href="https://wa.me/254114994730" class="btn btn-primary py-3 px-5 animated slideInDown">Learn More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                    <img class="img-fluid" src="{% static 'assets/img/turbo4.png'}" alt="">
+                                    <img class="img-fluid" src="{% static 'assets/img/turbo4.png'%}" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{% static 'assets/img/carousel-bg 1.jpg'}" alt="Image">
+                    <img class="w-100" src="{% static 'assets/img/carousel-bg 1.jpg'%}" alt="Image">
                     <div class="carousel-caption d-flex align-items-center">
                         <div class="container">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
@@ -37,7 +39,7 @@
                                     <a href="https://wa.me/254114994730" class="btn btn-primary py-3 px-5 animated slideInDown">Learn More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                    <img class="img-fluid" src="img/turboo3.jpg" alt="">
+                                    <img class="img-fluid" src="{% static 'assets/img/turboo3.jpg'%}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -69,7 +71,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Quality Servicing</h5>
                             <p>Our customer sastifaction is our Number ONE PRIORITY!</p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -79,7 +81,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Expert Workers</h5>
                             <p>We have top norche workers who will fully deliver our promised services </p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3">Modern Equipment</h5>
                             <p>Our cutting edge technology ready to serve you, which will ensures you receive a great product and service quality</p>
-                            <a class="text-secondary border-bottom" href="">Read More</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -105,7 +107,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 pt-4" style="min-height: 400px;">
                     <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/turbo6.jfif" style="object-fit: cover;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="{% static 'assets/img/turboooo.png'%}" style="object-fit: cover;" alt="">
                         <div class="position-absolute top-0 end-0 mt-n4 me-n4 py-4 px-5" style="background: rgba(0, 0, 0, .08);">
                             <h1 class="display-4 text-white mb-0">10 <span class="fs-4">Years</span></h1>
                             <h4 class="text-white">Experience</h4>
@@ -222,7 +224,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-1.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'assets/img/service-1.jpg'%}"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -234,9 +236,7 @@
                                         (2)Availability of quality service parts or replacement turbo unit<br>
 
                                         (3)Customers urgency <br></p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                 
                                     <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
@@ -245,16 +245,14 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-2.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'assets/img/koko.png'%}"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">10 Years Of Experience In Auto Servicing</h3>
                                     <p class="mb-4">Replacement of a faulty turbo with a new or fully reconditioned turbocharger is a common practice in the turbochargers repair. Due to the request of the customer, instead of repairing the turbocharger, we make a replacement for it. Possessing all the technical base in our service center, experienced and skilled specialists will replace any turbochargers of all known cars brands.<br>Some enthusiasts replace the turbocharger in order to squeeze more power out of the car's engine. Not an exception is the cases when it is possible to install more powerful turbo on the engine, giving the car a greater speed of acceleration and increase its power. Such manipulations require extensive knowledge and experience, because you need to consider the type of turbocharger and its design features.</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    
                                     <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
@@ -263,16 +261,14 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-3.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'assets/img/popppp.png'%}"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">10 Years Of Experience In Turbo Servicing</h3>
                                     <p class="mb-4">Our company has a network of equipped, modern repair shops that produce high-quality, professional repair of faulty turbochargers of all leading brands of cars.<br> We repairs and rebuilds faulty turbos of world brands, such as BorgWarner Turbo Systems (3K, KKK, Schwitzer), Garrett by Honeywell, Mitsubishi, Toyota and other less well-known manufacturers. <br>Based on long experience of work and our strict quality policy, we provide only high-quality services for repair and reconditioning of turbochargers.<br> Professional repairs of turbochargers are carried out by qualified, specially trained personnel using the most modern and reliable equipment</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                  
                                     <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
@@ -281,7 +277,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-4.jpg"
+                                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'assets/img/service-4.jpg'%}"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -291,9 +287,7 @@
 
                                         It means taking the engine apart and replacing different parts, including valves, pistons, connecting rods, crankshafts, camshafts.  <br>
                                     We fix all engine related problems eg Oil leaks which can be anything from the oil pan, the valve cover gaskets, the rear main seal or crankshaft seal.We will perform a diagnostic check and tell you the problem. <br> We also perform engine maintainance eg oil changes and fluid exchanges.Then, there’s maintenance due to time and mileage, such as belts and hoses. </p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    
                                     <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
@@ -373,23 +367,23 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Beatrice Nyambura</h5>
+                    <p>Actuarist</p>
                     <div class="testimonial-text bg-light text-center p-4">
                     <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">DerickDave Kiiru</h5>
+                    <p>Professional Trader</p>
                     <div class="testimonial-text bg-light text-center p-4">
                     <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
+                    <h5 class="mb-0">Christopher Kariuki</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
                     <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
@@ -397,7 +391,7 @@
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
+                    <h5 class="mb-0">Evan Tooney</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
                     <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
@@ -407,6 +401,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
+        
 
     {% endblock content %}
 
