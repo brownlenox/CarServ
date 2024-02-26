@@ -108,3 +108,38 @@
     
 })(jQuery);
 
+
+function sendMail(){
+    var params = {
+        name: document.getElementById("user_name").value ,
+        email: document.getElementById("user_email").value,
+        service: document.getElementById("service").value,
+        service_date: document.getElementById("service_date").value,
+        special_request: document.getElementById("special_request").value,
+    };
+
+    
+        const serviceID = emailJSconfig.serviceID;
+        const templateID = emailJSconfig.templateID;
+
+
+        (function(){
+            emailjs.init(emailJSconfig.emailjsKey);
+        })();
+        
+        
+
+        emailjs.send(serviceID,templateID,params)
+        .then(
+            res =>{
+                document.getElementById("user_name").value = "";
+                document.getElementById("user_email").value = "";
+                document.getElementById("service").value = "";
+                document.getElementById("service_date").value = "";
+                document.getElementById("special_request").value = "";
+                console.log(res);
+                alert("Your Message has been sent Succesfully!!")
+            }
+        )
+        .catch((err) => console.log(err));
+}
