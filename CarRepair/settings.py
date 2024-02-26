@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 from pathlib import Path
 from django.contrib import messages
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -146,3 +148,10 @@ MESSAGE_TAGS = {
     messages.DEBUG: "alert-dark",
     messages.WARNING: "alert-warning",
 }
+
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+

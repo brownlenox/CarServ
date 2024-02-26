@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from django.contrib import messages
+from django.core.mail import send_mail
+from CarRepair import settings
+import smtplib
+import os
 
 
 def index(request):
@@ -66,6 +70,18 @@ def contact(request):
             service=service,
             service_date=service_date,
             special_request=special_request
+        )
+
+        from_email = os.environ.get('EMAIL_HOST_USER')
+
+        message = f"New booking information:\n\nUser Name: {user_name}\nEmail: {user_email}\nService: {service}\nService Date: {service_date}\nSpecial Request: {special_request}"
+
+        send_mail(
+            subject='New Booking Notification',
+            message=message,
+            from_email=from_email,
+            recipient_list=['Cleaniq1@gmail.com'],
+            fail_silently=True
         )
 
         messages.success(request, 'Booking has been done succesfully. See you soon.')
