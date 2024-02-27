@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Booking
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, send_mass_mail
 from CarRepair import settings
 import smtplib
 import os
@@ -72,23 +72,25 @@ def contact(request):
             special_request=special_request
         )
 
-        from_email = os.environ.get('EMAIL_HOST_USER')
-
-        message = f"New booking information:\n\nUser Name: {user_name}\nEmail: {user_email}\nService: {service}\nService Date: {service_date}\nSpecial Request: {special_request}"
-
-        send_mail(
-            subject='New Booking Notification',
-            message=message,
-            from_email=from_email,
-            recipient_list=['Cleaniq1@gmail.com'],
-            fail_silently=True
+        subject = 'New Booking Notification'
+        message = (
+            f"New booking information:\n\nUser Name: {user_name}\nEmail: {user_email}\nService: {service}\nService Date: {service_date}\nSpecial Request: {special_request}"
         )
+        from_email = os.environ.get('EMAIL_HOST_USER')
+        to_email = settings.EMAIL_HOST_USER
 
-        messages.success(request, 'Booking has been done succesfully. See you soon.')
-
+        try:
+            send_mail(
+                subject=subject,
+                message=message,
+                from_email=from_email,
+                recipient_list=[to_email],
+                fail_silently=True
+            )
+            messages.success(request, 'Booking has been done successfully. See you soon.')
+        except Exception as e:
+            messages.error(request, 'An error occurred while sending the email. Please try again later.')
 
         return redirect('contact')
 
     return render(request, "contact.html")
-
-
